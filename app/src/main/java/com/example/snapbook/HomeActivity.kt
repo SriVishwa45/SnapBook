@@ -19,29 +19,27 @@ class HomeActivity : AppCompatActivity() {
             finish() // Returns to MainActivity
         }
 
-        // 2. Services Card - FIXED INTENT
+        // 2. Services Card
         findViewById<LinearLayout>(R.id.cardServices).setOnClickListener {
-            Toast.makeText(this, "Opening Services...", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, ServicesActivity::class.java)
             startActivity(intent)
         }
 
-        // 3. Gallery Card
-        findViewById<LinearLayout>(R.id.cardGallery).setOnClickListener {
-            Toast.makeText(this, "Opening Gallery...", Toast.LENGTH_SHORT).show()
-            // Add Intent here when GalleryActivity is ready
+        // 3. Book Session Card - UPDATED INTENT
+        findViewById<LinearLayout>(R.id.cardBook).setOnClickListener {
+            Toast.makeText(this, "Opening Booking Page...", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, BookingActivity::class.java)
+            startActivity(intent)
         }
 
-        // 4. Book Session Card
-        findViewById<LinearLayout>(R.id.cardBook).setOnClickListener {
-            Toast.makeText(this, "Opening Booking Calendar...", Toast.LENGTH_SHORT).show()
-            // Add Intent here when BookingActivity is ready
+        // 4. Gallery Card
+        findViewById<LinearLayout>(R.id.cardGallery).setOnClickListener {
+            Toast.makeText(this, "Opening Gallery...", Toast.LENGTH_SHORT).show()
         }
 
         // 5. Contact Card
         findViewById<LinearLayout>(R.id.cardContact).setOnClickListener {
             Toast.makeText(this, "Opening Contact Info...", Toast.LENGTH_SHORT).show()
-            // Add Intent here when ContactActivity is ready
         }
     }
 }
